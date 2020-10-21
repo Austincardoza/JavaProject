@@ -24,9 +24,12 @@ public class admin extends javax.swing.JFrame {
     /**
      * Creates new form admin
      */
+    ADMINF adm=new ADMINF();
     public admin() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
+          adm.fillAddTable(jTable1);
         
         Border glob_panel_border = BorderFactory.createMatteBorder(1,1,1,1,Color.black);
         jPanel1.setBorder(glob_panel_border);
@@ -54,9 +57,10 @@ public class admin extends javax.swing.JFrame {
         jButton2_DELETEFOOD = new javax.swing.JButton();
         jButton3_MODIFY = new javax.swing.JButton();
         jButton4_ADDFOOD = new javax.swing.JButton();
-        jButton5_RECORDS = new javax.swing.JButton();
         jLabel1_ADMIN_CLOSE = new javax.swing.JLabel();
         jLabel2_ADMIN_MIN = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton5_RECORDS = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -119,28 +123,6 @@ public class admin extends javax.swing.JFrame {
             }
         });
 
-        jButton5_RECORDS.setBackground(new java.awt.Color(51, 51, 51));
-        jButton5_RECORDS.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5_RECORDS.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5_RECORDS.setText("RECORDS");
-        jButton5_RECORDS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton5_RECORDS.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5_RECORDSMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton5_RECORDSMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton5_RECORDSMouseExited(evt);
-            }
-        });
-        jButton5_RECORDS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5_RECORDSActionPerformed(evt);
-            }
-        });
-
         jLabel1_ADMIN_CLOSE.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1_ADMIN_CLOSE.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1_ADMIN_CLOSE.setText("X");
@@ -174,6 +156,50 @@ public class admin extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("ORDERS");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton5_RECORDS.setBackground(new java.awt.Color(51, 51, 51));
+        jButton5_RECORDS.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton5_RECORDS.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5_RECORDS.setText("RECORDS");
+        jButton5_RECORDS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5_RECORDS.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5_RECORDSMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton5_RECORDSMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton5_RECORDSMouseExited(evt);
+            }
+        });
+        jButton5_RECORDS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5_RECORDSActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -186,8 +212,10 @@ public class admin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton3_MODIFY, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton5_RECORDS, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 508, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 340, Short.MAX_VALUE)
                 .addComponent(jLabel2_ADMIN_MIN, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1_ADMIN_CLOSE, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -197,30 +225,32 @@ public class admin extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2_ADMIN_MIN, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton5_RECORDS, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton3_MODIFY, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2_DELETEFOOD, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton4_ADDFOOD, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1_ADMIN_CLOSE, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2_ADMIN_MIN, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton3_MODIFY, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton2_DELETEFOOD, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton5_RECORDS, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1_ADMIN_CLOSE, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jButton4_ADDFOOD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(-10, 0, 1290, 50);
 
+        jTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "ID", "FOOD NAME", "FOOD TYPE", "PRICE"
             }
-        ));
+        ){public boolean isCellEditable(int row, int column){return false;}});
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1);
@@ -350,6 +380,27 @@ public class admin extends javax.swing.JFrame {
         rc.setVisible(true);
     }//GEN-LAST:event_jButton5_RECORDSMouseClicked
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        orders ord=new orders();
+        this.setVisible(false);
+        ord.setVisible(true);
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        // TODO add your handling code here:
+         jButton1.setBackground(new Color(102,102,102));
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+        // TODO add your handling code here:
+         jButton1.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton1MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -386,6 +437,7 @@ public class admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2_DELETEFOOD;
     private javax.swing.JButton jButton3_MODIFY;
     private javax.swing.JButton jButton4_ADDFOOD;
