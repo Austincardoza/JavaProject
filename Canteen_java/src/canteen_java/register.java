@@ -200,13 +200,20 @@ public class register extends javax.swing.JFrame {
         jLabel7.setText("Confirm Password");
         jPanel3.add(jLabel7);
         jLabel7.setBounds(120, 494, 180, 40);
+
+        jTextField1_fullname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel3.add(jTextField1_fullname);
         jTextField1_fullname.setBounds(370, 214, 350, 40);
+
+        jTextField2_rollno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel3.add(jTextField2_rollno);
         jTextField2_rollno.setBounds(370, 270, 350, 40);
+
+        jTextField3_branch.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel3.add(jTextField3_branch);
         jTextField3_branch.setBounds(370, 326, 350, 40);
 
+        jTextField4_phoneno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField4_phoneno.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField4_phonenoKeyTyped(evt);
@@ -214,6 +221,8 @@ public class register extends javax.swing.JFrame {
         });
         jPanel3.add(jTextField4_phoneno);
         jTextField4_phoneno.setBounds(370, 382, 350, 40);
+
+        jPasswordField1_password.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel3.add(jPasswordField1_password);
         jPasswordField1_password.setBounds(370, 438, 350, 40);
 
@@ -234,6 +243,8 @@ public class register extends javax.swing.JFrame {
         });
         jPanel3.add(jLabel8);
         jLabel8.setBounds(790, 740, 50, 20);
+
+        jPasswordField2_password_confirm.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel3.add(jPasswordField2_password_confirm);
         jPasswordField2_password_confirm.setBounds(370, 494, 350, 40);
 
@@ -246,6 +257,8 @@ public class register extends javax.swing.JFrame {
         jLabel10.setText("E-Mail");
         jPanel3.add(jLabel10);
         jLabel10.setBounds(120, 560, 100, 30);
+
+        jTextField1_email.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel3.add(jTextField1_email);
         jTextField1_email.setBounds(370, 560, 350, 40);
 

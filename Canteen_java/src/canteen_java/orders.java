@@ -13,11 +13,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
-
+import com.email.durgesh.Email;
+import javax.swing.JTable;
 /**
  *
  * @author abc
@@ -42,6 +41,12 @@ public class orders extends javax.swing.JFrame {
         jPanel1.setBorder(glob_panel_border);
         jPanel2.setBorder(glob_panel_border);
         jPanel3.setBorder(glob_panel_border);
+        
+        Border field_border = BorderFactory.createMatteBorder(1,2,1,1,Color.white);
+        jTextField1_food_name.setBorder(field_border);
+        jTextField2_quan.setBorder(field_border);
+        jTextField3_totalpri.setBorder(field_border);
+         jTextField4_rollno.setBorder(field_border);
     }
 
     /**
@@ -55,11 +60,11 @@ public class orders extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButton1_add = new javax.swing.JButton();
+        jButton2_del = new javax.swing.JButton();
+        jButton3_modify = new javax.swing.JButton();
+        jButton4_orders = new javax.swing.JButton();
+        jButton5_rec = new javax.swing.JButton();
         jLabel2_ord_close = new javax.swing.JLabel();
         jLabel2_ord_min = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -67,11 +72,13 @@ public class orders extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
+        jTextField1_food_name = new javax.swing.JTextField();
+        jTextField2_quan = new javax.swing.JTextField();
+        jTextField3_totalpri = new javax.swing.JTextField();
+        jButton6_done = new javax.swing.JButton();
+        jLabel5_back = new javax.swing.JLabel();
+        jButton7_cancel = new javax.swing.JButton();
+        jTextField4_rollno = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -82,88 +89,88 @@ public class orders extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 150, 136));
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ADD FOOD");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton1_add.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1_add.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1_add.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1_add.setText("ADD FOOD");
+        jButton1_add.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1_add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                jButton1_addMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
+                jButton1_addMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
+                jButton1_addMouseExited(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 51, 51));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("DELETE FOOD");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton2_del.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2_del.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2_del.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2_del.setText("DELETE FOOD");
+        jButton2_del.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2_del.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                jButton2_delMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton2MouseEntered(evt);
+                jButton2_delMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton2MouseExited(evt);
+                jButton2_delMouseExited(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(51, 51, 51));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("MODIFY");
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton3_modify.setBackground(new java.awt.Color(51, 51, 51));
+        jButton3_modify.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3_modify.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3_modify.setText("MODIFY");
+        jButton3_modify.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3_modify.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                jButton3_modifyMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton3MouseEntered(evt);
+                jButton3_modifyMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton3MouseExited(evt);
+                jButton3_modifyMouseExited(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(51, 51, 51));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("ORDERS");
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton4_orders.setBackground(new java.awt.Color(51, 51, 51));
+        jButton4_orders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton4_orders.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4_orders.setText("ORDERS");
+        jButton4_orders.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4_orders.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
+                jButton4_ordersMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton4MouseEntered(evt);
+                jButton4_ordersMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton4MouseExited(evt);
+                jButton4_ordersMouseExited(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(51, 51, 51));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("RECORDS");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton5_rec.setBackground(new java.awt.Color(51, 51, 51));
+        jButton5_rec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton5_rec.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5_rec.setText("RECORDS");
+        jButton5_rec.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5_rec.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
+                jButton5_recMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton5MouseEntered(evt);
+                jButton5_recMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton5MouseExited(evt);
+                jButton5_recMouseExited(evt);
             }
         });
 
@@ -205,15 +212,15 @@ public class orders extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1_add, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton2_del, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton3_modify, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton4_orders, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton5_rec, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 340, Short.MAX_VALUE)
                 .addComponent(jLabel2_ord_min, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -224,11 +231,11 @@ public class orders extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jLabel2_ord_close, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1_add, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2_del, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3_modify, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton4_orders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5_rec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2_ord_min, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -254,85 +261,142 @@ public class orders extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("ROLL NO");
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextField1_food_name.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jTextField1_food_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextField1_food_nameActionPerformed(evt);
             }
         });
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jTextField2_quan.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jTextField2_quan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jTextField2_quanActionPerformed(evt);
             }
         });
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jTextField3_totalpri.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jTextField3_totalpri.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jTextField3_totalpriActionPerformed(evt);
             }
         });
 
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-
-        jButton6.setText("jButton6");
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton6_done.setBackground(new java.awt.Color(0, 84, 140));
+        jButton6_done.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton6_done.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6_done.setText("DONE");
+        jButton6_done.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6_done.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
+                jButton6_doneMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton6_doneMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton6_doneMouseExited(evt);
             }
         });
+
+        jLabel5_back.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5_back.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel5_back.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5_back.setText("<<back");
+        jLabel5_back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5_back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5_backMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel5_backMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel5_backMouseExited(evt);
+            }
+        });
+
+        jButton7_cancel.setBackground(new java.awt.Color(0, 84, 140));
+        jButton7_cancel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton7_cancel.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7_cancel.setText("CANCEL");
+        jButton7_cancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton7_cancel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7_cancelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton7_cancelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton7_cancelMouseExited(evt);
+            }
+        });
+
+        jTextField4_rollno.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(22, 22, 22)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField2_quan, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1_food_name, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 204, Short.MAX_VALUE)
+                        .addComponent(jButton6_done, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74)
+                        .addComponent(jButton7_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(208, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
-                    .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(260, 260, 260)
-                .addComponent(jButton6)
-                .addContainerGap(586, Short.MAX_VALUE))
+                            .addComponent(jTextField3_totalpri, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addComponent(jTextField4_rollno))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel5_back, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel5_back, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1_food_name, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2_quan, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton6_done, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton7_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton6)
-                        .addGap(46, 46, 46)))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                    .addComponent(jTextField4))
-                .addContainerGap(22, Short.MAX_VALUE))
+                            .addComponent(jTextField3_totalpri, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                            .addComponent(jTextField4_rollno))
+                        .addGap(11, 11, 11)))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3);
@@ -365,95 +429,95 @@ public class orders extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 801, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void jButton1_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_addMouseClicked
         // TODO add your handling code here:
          addfood af=new addfood();
         this.setVisible(false);
         af.setVisible(true);
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_jButton1_addMouseClicked
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+    private void jButton1_addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_addMouseEntered
         // TODO add your handling code here:
-        jButton1.setBackground(new Color(102,102,102));
-    }//GEN-LAST:event_jButton1MouseEntered
+        jButton1_add.setBackground(new Color(102,102,102));
+    }//GEN-LAST:event_jButton1_addMouseEntered
 
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+    private void jButton1_addMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_addMouseExited
         // TODO add your handling code here:
-        jButton1.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_jButton1MouseExited
+        jButton1_add.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton1_addMouseExited
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void jButton2_delMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_delMouseClicked
         // TODO add your handling code here:
          deletefood del=new deletefood();
         this.setVisible(false);
         del.setVisible(true);
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_jButton2_delMouseClicked
 
-    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+    private void jButton2_delMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_delMouseEntered
         // TODO add your handling code here:
-         jButton2.setBackground(new Color(102,102,102));
+         jButton2_del.setBackground(new Color(102,102,102));
         
-    }//GEN-LAST:event_jButton2MouseEntered
+    }//GEN-LAST:event_jButton2_delMouseEntered
 
-    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+    private void jButton2_delMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_delMouseExited
         // TODO add your handling code here:
-        jButton2.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_jButton2MouseExited
+        jButton2_del.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton2_delMouseExited
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void jButton3_modifyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_modifyMouseClicked
         // TODO add your handling code here:
          modify mod=new modify();
         this.setVisible(false);
         mod.setVisible(true);
         
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_jButton3_modifyMouseClicked
 
-    private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
+    private void jButton3_modifyMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_modifyMouseEntered
         // TODO add your handling code here:
-         jButton3.setBackground(new Color(102,102,102));
-    }//GEN-LAST:event_jButton3MouseEntered
+         jButton3_modify.setBackground(new Color(102,102,102));
+    }//GEN-LAST:event_jButton3_modifyMouseEntered
 
-    private void jButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseExited
+    private void jButton3_modifyMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_modifyMouseExited
         // TODO add your handling code here:
-        jButton3.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_jButton3MouseExited
+        jButton3_modify.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton3_modifyMouseExited
 
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+    private void jButton4_ordersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_ordersMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4MouseClicked
+    }//GEN-LAST:event_jButton4_ordersMouseClicked
 
-    private void jButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseEntered
+    private void jButton4_ordersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_ordersMouseEntered
         // TODO add your handling code here:
-        jButton4.setBackground(new Color(102,102,102));
-    }//GEN-LAST:event_jButton4MouseEntered
+        jButton4_orders.setBackground(new Color(102,102,102));
+    }//GEN-LAST:event_jButton4_ordersMouseEntered
 
-    private void jButton4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseExited
+    private void jButton4_ordersMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_ordersMouseExited
         // TODO add your handling code here:
-        jButton4.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_jButton4MouseExited
+        jButton4_orders.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton4_ordersMouseExited
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+    private void jButton5_recMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5_recMouseClicked
         // TODO add your handling code here:
          record rec=new record();
         this.setVisible(false);
         rec.setVisible(true);
-    }//GEN-LAST:event_jButton5MouseClicked
+    }//GEN-LAST:event_jButton5_recMouseClicked
 
-    private void jButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseEntered
+    private void jButton5_recMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5_recMouseEntered
         // TODO add your handling code here:
-        jButton5.setBackground(new Color(102,102,102));
-    }//GEN-LAST:event_jButton5MouseEntered
+        jButton5_rec.setBackground(new Color(102,102,102));
+    }//GEN-LAST:event_jButton5_recMouseEntered
 
-    private void jButton5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseExited
+    private void jButton5_recMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5_recMouseExited
         // TODO add your handling code here:
-        jButton5.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_jButton5MouseExited
+        jButton5_rec.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton5_recMouseExited
 
     private void jLabel2_ord_minMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2_ord_minMouseClicked
         // TODO add your handling code here:
@@ -493,34 +557,34 @@ public class orders extends javax.swing.JFrame {
         jLabel2_ord_close.setForeground(Color.black);
     }//GEN-LAST:event_jLabel2_ord_closeMouseExited
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextField1_food_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_food_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextField1_food_nameActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jTextField2_quanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2_quanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jTextField2_quanActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jTextField3_totalpriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3_totalpriActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_jTextField3_totalpriActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
         int rIndex=jTable1.getSelectedRow();
-         jTextField1.setText(model.getValueAt(rIndex, 0).toString());
-        jTextField2.setText(model.getValueAt(rIndex, 1).toString());
-        jTextField3.setText(model.getValueAt(rIndex, 2).toString());
-        jTextField4.setText(model.getValueAt(rIndex, 3).toString());
+         jTextField1_food_name.setText(model.getValueAt(rIndex, 0).toString());
+        jTextField2_quan.setText(model.getValueAt(rIndex, 1).toString());
+        jTextField3_totalpri.setText(model.getValueAt(rIndex, 2).toString());
+        jTextField4_rollno.setText(model.getValueAt(rIndex, 3).toString());
     }//GEN-LAST:event_jTable1MouseClicked
 
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+    private void jButton6_doneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6_doneMouseClicked
         // TODO add your handling code here:
         PreparedStatement ps;
          ResultSet rs;
-         
-         String rno=jTextField4.getText();
+         String ToEmail;
+         String rno=usr.getTab();
          My_CNX mycon=new My_CNX();
          
          String query="SELECT email FROM login WHERE `roll_no`=?";
@@ -529,15 +593,87 @@ public class orders extends javax.swing.JFrame {
             ps.setString(1, rno);
             rs=ps.executeQuery();
             while(rs.next()){
-           String ans = rs.getString(1);
-           System.out.print(ans);
+           ToEmail = rs.getString(1);
+              
+             try{
+                 Email email=new Email("canteen089@gmail.com","Canteen245");
+                 email.setFrom("canteen089@gmail.com","Canteen project");
+                 email.setSubject("ABOUT YOUR ORDER");
+                 email.setContent("<h3>YOUR ORDER IS READY!!!</h3>","text/html");
+                 email.addRecipient(ToEmail);
+                 email.send();
+             }catch(Exception e){
+                 e.printStackTrace();
+             }
+            
+              
+              
+              
+             
+              
+              
+              
             }
         } catch (SQLException ex) {
             Logger.getLogger(orders.class.getName()).log(Level.SEVERE, null, ex);
         }
+         String foodName=jTextField1_food_name.getText();
+        String quantity=jTextField2_quan.getText();
+        String price=jTextField3_totalpri.getText();
+        String rollno=jTextField4_rollno.getText();
+        usr.Record(rollno,foodName,price,quantity);
+        usr.delete(rollno,foodName);
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"FOOD NAME","QUANTITY","TOTAL PRICE","ROLL NO"}));
+         usr.fillorderTable(jTable1);
+         
         
         
-    }//GEN-LAST:event_jButton6MouseClicked
+    }//GEN-LAST:event_jButton6_doneMouseClicked
+
+    private void jLabel5_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5_backMouseClicked
+        // TODO add your handling code here:
+         admin ad=new admin();
+        this.setVisible(false);
+        ad.setVisible(true);
+    }//GEN-LAST:event_jLabel5_backMouseClicked
+
+    private void jLabel5_backMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5_backMouseEntered
+        // TODO add your handling code here:
+         jLabel5_back.setForeground(Color.white);
+    }//GEN-LAST:event_jLabel5_backMouseEntered
+
+    private void jLabel5_backMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5_backMouseExited
+        // TODO add your handling code here:
+         jLabel5_back.setForeground(new Color(0,0,255));
+    }//GEN-LAST:event_jLabel5_backMouseExited
+
+    private void jButton6_doneMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6_doneMouseEntered
+        // TODO add your handling code here:
+          jButton6_done.setBackground(new Color(0,101,183));
+    }//GEN-LAST:event_jButton6_doneMouseEntered
+
+    private void jButton7_cancelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7_cancelMouseEntered
+        // TODO add your handling code here:
+          jButton7_cancel.setBackground(new Color(0,101,183));
+    }//GEN-LAST:event_jButton7_cancelMouseEntered
+
+    private void jButton6_doneMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6_doneMouseExited
+        // TODO add your handling code here:
+         jButton6_done.setBackground(new Color(0,84,104));
+    }//GEN-LAST:event_jButton6_doneMouseExited
+
+    private void jButton7_cancelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7_cancelMouseExited
+        // TODO add your handling code here:
+        jButton7_cancel.setBackground(new Color(0,84,104));
+    }//GEN-LAST:event_jButton7_cancelMouseExited
+
+    private void jButton7_cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7_cancelMouseClicked
+        // TODO add your handling code here:
+         jTextField1_food_name.setText("");
+        jTextField2_quan.setText("");
+        jTextField3_totalpri.setText("");
+        jTextField4_rollno.setText("");
+    }//GEN-LAST:event_jButton7_cancelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -575,26 +711,28 @@ public class orders extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton1_add;
+    private javax.swing.JButton jButton2_del;
+    private javax.swing.JButton jButton3_modify;
+    private javax.swing.JButton jButton4_orders;
+    private javax.swing.JButton jButton5_rec;
+    private javax.swing.JButton jButton6_done;
+    private javax.swing.JButton jButton7_cancel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel2_ord_close;
     private javax.swing.JLabel jLabel2_ord_min;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5_back;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField1_food_name;
+    private javax.swing.JTextField jTextField2_quan;
+    private javax.swing.JTextField jTextField3_totalpri;
+    private javax.swing.JTextField jTextField4_rollno;
     // End of variables declaration//GEN-END:variables
-}
+

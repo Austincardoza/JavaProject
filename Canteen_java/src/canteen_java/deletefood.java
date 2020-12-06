@@ -59,13 +59,13 @@ public class deletefood extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButton1_add = new javax.swing.JButton();
+        jButton2_del = new javax.swing.JButton();
+        jButton3_mod = new javax.swing.JButton();
+        jButton4_rec = new javax.swing.JButton();
         jLabel1_del_close = new javax.swing.JLabel();
         jLabel2_del_min = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        jButton5_ord = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -74,8 +74,8 @@ public class deletefood extends javax.swing.JFrame {
         jTextField2_FOOD_TYPE = new javax.swing.JTextField();
         jTextField3_PRICE = new javax.swing.JTextField();
         jButton6_delete = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        jButton7_remove = new javax.swing.JButton();
+        jLabel4_back = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jTextField1_ID = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -88,73 +88,73 @@ public class deletefood extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 150, 136));
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ADD FOOD");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton1_add.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1_add.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1_add.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1_add.setText("ADD FOOD");
+        jButton1_add.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1_add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                jButton1_addMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
+                jButton1_addMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
+                jButton1_addMouseExited(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 51, 51));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("DELETE FOOD");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton2_del.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2_del.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2_del.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2_del.setText("DELETE FOOD");
+        jButton2_del.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2_del.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton2MouseEntered(evt);
+                jButton2_delMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton2MouseExited(evt);
+                jButton2_delMouseExited(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(51, 51, 51));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("MODIFY");
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton3_mod.setBackground(new java.awt.Color(51, 51, 51));
+        jButton3_mod.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3_mod.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3_mod.setText("MODIFY");
+        jButton3_mod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3_mod.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                jButton3_modMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton3MouseEntered(evt);
+                jButton3_modMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton3MouseExited(evt);
+                jButton3_modMouseExited(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(51, 51, 51));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("RECORDS");
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton4_rec.setBackground(new java.awt.Color(51, 51, 51));
+        jButton4_rec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton4_rec.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4_rec.setText("RECORDS");
+        jButton4_rec.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4_rec.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
+                jButton4_recMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton4MouseEntered(evt);
+                jButton4_recMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton4MouseExited(evt);
+                jButton4_recMouseExited(evt);
             }
         });
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButton4_rec.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton4_recActionPerformed(evt);
             }
         });
 
@@ -190,25 +190,25 @@ public class deletefood extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(51, 51, 51));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("ORDERS");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton5_ord.setBackground(new java.awt.Color(51, 51, 51));
+        jButton5_ord.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton5_ord.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5_ord.setText("ORDERS");
+        jButton5_ord.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5_ord.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
+                jButton5_ordMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton5MouseEntered(evt);
+                jButton5_ordMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton5MouseExited(evt);
+                jButton5_ordMouseExited(evt);
             }
         });
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButton5_ord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButton5_ordActionPerformed(evt);
             }
         });
 
@@ -218,15 +218,15 @@ public class deletefood extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1_add, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton2_del, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton3_mod, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton5_ord, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton4_rec, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 339, Short.MAX_VALUE)
                 .addComponent(jLabel2_del_min, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -236,13 +236,13 @@ public class deletefood extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(jButton4_rec, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(jButton3_mod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5_ord, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                     .addComponent(jLabel1_del_close, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2_del_min, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton2_del, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1_add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -293,39 +293,39 @@ public class deletefood extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(0, 84, 140));
-        jButton7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("REMOVE FIELDS");
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton7_remove.setBackground(new java.awt.Color(0, 84, 140));
+        jButton7_remove.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton7_remove.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7_remove.setText("REMOVE FIELDS");
+        jButton7_remove.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton7_remove.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton7MouseEntered(evt);
+                jButton7_removeMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton7MouseExited(evt);
+                jButton7_removeMouseExited(evt);
             }
         });
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jButton7_remove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                jButton7_removeActionPerformed(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("<<back");
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel4_back.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4_back.setForeground(new java.awt.Color(0, 0, 204));
+        jLabel4_back.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4_back.setText("<<back");
+        jLabel4_back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4_back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
+                jLabel4_backMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel4MouseEntered(evt);
+                jLabel4_backMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel4MouseExited(evt);
+                jLabel4_backMouseExited(evt);
             }
         });
 
@@ -369,10 +369,10 @@ public class deletefood extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jButton6_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(82, 82, 82)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton7_remove, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(231, 231, 231))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4_back, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(45, 45, 45))))
         );
         jPanel3Layout.setVerticalGroup(
@@ -383,7 +383,7 @@ public class deletefood extends javax.swing.JFrame {
                         .addGap(73, 73, 73)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton6_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton7_remove, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(33, 33, 33))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
@@ -400,7 +400,7 @@ public class deletefood extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4_back, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTextField3_PRICE, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -443,10 +443,10 @@ public class deletefood extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4_recActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_recActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jButton4_recActionPerformed
 
     private void jLabel2_del_minMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2_del_minMouseClicked
         // TODO add your handling code here:
@@ -486,56 +486,56 @@ public class deletefood extends javax.swing.JFrame {
         jLabel1_del_close.setForeground(Color.black);
     }//GEN-LAST:event_jLabel1_del_closeMouseExited
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+    private void jButton1_addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_addMouseEntered
         // TODO add your handling code here:
-        jButton1.setBackground(new Color(102,102,102));
-    }//GEN-LAST:event_jButton1MouseEntered
+        jButton1_add.setBackground(new Color(102,102,102));
+    }//GEN-LAST:event_jButton1_addMouseEntered
 
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+    private void jButton1_addMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_addMouseExited
         // TODO add your handling code here:
-        jButton1.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_jButton1MouseExited
+        jButton1_add.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton1_addMouseExited
 
-    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+    private void jButton2_delMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_delMouseEntered
         // TODO add your handling code here:
-        jButton2.setBackground(new Color(102,102,102));
-    }//GEN-LAST:event_jButton2MouseEntered
+        jButton2_del.setBackground(new Color(102,102,102));
+    }//GEN-LAST:event_jButton2_delMouseEntered
 
-    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+    private void jButton2_delMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_delMouseExited
         // TODO add your handling code here:
-        jButton2.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_jButton2MouseExited
+        jButton2_del.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton2_delMouseExited
 
-    private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
+    private void jButton3_modMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_modMouseEntered
         // TODO add your handling code here:
-        jButton3.setBackground(new Color(102,102,102));
-    }//GEN-LAST:event_jButton3MouseEntered
+        jButton3_mod.setBackground(new Color(102,102,102));
+    }//GEN-LAST:event_jButton3_modMouseEntered
 
-    private void jButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseExited
+    private void jButton3_modMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_modMouseExited
         // TODO add your handling code here:
-        jButton3.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_jButton3MouseExited
+        jButton3_mod.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton3_modMouseExited
 
-    private void jButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseEntered
+    private void jButton4_recMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_recMouseEntered
         // TODO add your handling code here:
-        jButton4.setBackground(new Color(102,102,102));
-    }//GEN-LAST:event_jButton4MouseEntered
+        jButton4_rec.setBackground(new Color(102,102,102));
+    }//GEN-LAST:event_jButton4_recMouseEntered
 
-    private void jButton4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseExited
+    private void jButton4_recMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_recMouseExited
         // TODO add your handling code here:
-        jButton4.setBackground(new Color(51,51,51));
-    }//GEN-LAST:event_jButton4MouseExited
+        jButton4_rec.setBackground(new Color(51,51,51));
+    }//GEN-LAST:event_jButton4_recMouseExited
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void jButton1_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_addMouseClicked
         // TODO add your handling code here:
          addfood af=new addfood();
         this.setVisible(false);
         af.setVisible(true);
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_jButton1_addMouseClicked
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButton5_ordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_ordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_jButton5_ordActionPerformed
 
     private void jTextField2_FOOD_TYPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2_FOOD_TYPEActionPerformed
         // TODO add your handling code here:
@@ -561,41 +561,41 @@ public class deletefood extends javax.swing.JFrame {
         jButton6_delete.setBackground(new Color(0,84,104));
     }//GEN-LAST:event_jButton6_deleteMouseExited
 
-    private void jButton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseEntered
+    private void jButton7_removeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7_removeMouseEntered
         // TODO add your handling code here:
-        jButton7.setBackground(new Color(0,101,183));
-    }//GEN-LAST:event_jButton7MouseEntered
+        jButton7_remove.setBackground(new Color(0,101,183));
+    }//GEN-LAST:event_jButton7_removeMouseEntered
 
-    private void jButton7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseExited
+    private void jButton7_removeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7_removeMouseExited
         // TODO add your handling code here:
-        jButton7.setBackground(new Color(0,84,104));
-    }//GEN-LAST:event_jButton7MouseExited
+        jButton7_remove.setBackground(new Color(0,84,104));
+    }//GEN-LAST:event_jButton7_removeMouseExited
 
-    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+    private void jLabel4_backMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4_backMouseEntered
         // TODO add your handling code here:
-        jLabel4.setForeground(Color.white);
-    }//GEN-LAST:event_jLabel4MouseEntered
+        jLabel4_back.setForeground(Color.white);
+    }//GEN-LAST:event_jLabel4_backMouseEntered
 
-    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
+    private void jLabel4_backMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4_backMouseExited
         // TODO add your handling code here:
-        jLabel4.setForeground(new Color(0,0,255));
-    }//GEN-LAST:event_jLabel4MouseExited
+        jLabel4_back.setForeground(new Color(0,0,255));
+    }//GEN-LAST:event_jLabel4_backMouseExited
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void jLabel4_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4_backMouseClicked
         // TODO add your handling code here:
          admin ad=new admin();
         this.setVisible(false);
         ad.setVisible(true);
 
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }//GEN-LAST:event_jLabel4_backMouseClicked
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jButton7_removeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7_removeActionPerformed
         // TODO add your handling code here:
         jTextField1_FOOD_NAME.setText("");
         jTextField2_FOOD_TYPE.setText("");
         jTextField3_PRICE.setText("");
          jTextField1_ID.setText("");
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_jButton7_removeActionPerformed
 
     private void jButton6_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6_deleteActionPerformed
         // TODO add your handling code here:
@@ -619,38 +619,38 @@ public class deletefood extends javax.swing.JFrame {
         adm.fillAddTable(jTable1);
     }//GEN-LAST:event_jButton6_deleteActionPerformed
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void jButton3_modMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_modMouseClicked
         // TODO add your handling code here:
         modify mod=new modify();
         this.setVisible(false);
         mod.setVisible(true);
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_jButton3_modMouseClicked
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+    private void jButton5_ordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5_ordMouseClicked
         // TODO add your handling code here:
         orders ord=new orders();
         this.setVisible(false);
         ord.setVisible(true);
-    }//GEN-LAST:event_jButton5MouseClicked
+    }//GEN-LAST:event_jButton5_ordMouseClicked
 
-    private void jButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseEntered
+    private void jButton5_ordMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5_ordMouseEntered
         // TODO add your handling code here:
-        jButton5.setBackground(new Color(102,102,102));
+        jButton5_ord.setBackground(new Color(102,102,102));
 
-    }//GEN-LAST:event_jButton5MouseEntered
+    }//GEN-LAST:event_jButton5_ordMouseEntered
 
-    private void jButton5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseExited
+    private void jButton5_ordMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5_ordMouseExited
         // TODO add your handling code here:
-        jButton5.setBackground(new Color(51,51,51));
+        jButton5_ord.setBackground(new Color(51,51,51));
 
-    }//GEN-LAST:event_jButton5MouseExited
+    }//GEN-LAST:event_jButton5_ordMouseExited
 
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+    private void jButton4_recMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_recMouseClicked
         // TODO add your handling code here:
         record rec=new record();
         this.setVisible(false);
         rec.setVisible(true);
-    }//GEN-LAST:event_jButton4MouseClicked
+    }//GEN-LAST:event_jButton4_recMouseClicked
 
     /**
      * @param args the command line arguments
@@ -688,19 +688,19 @@ public class deletefood extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton1_add;
+    private javax.swing.JButton jButton2_del;
+    private javax.swing.JButton jButton3_mod;
+    private javax.swing.JButton jButton4_rec;
+    private javax.swing.JButton jButton5_ord;
     private javax.swing.JButton jButton6_delete;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton7_remove;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel1_del_close;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel2_del_min;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel4_back;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
